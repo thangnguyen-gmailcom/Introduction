@@ -9,6 +9,7 @@ public class ReadNumberIntoWord {
         int unit = (num % 100)%10;
         int dozens = (num %100)/10;
         int hundreds = num /100;
+        boolean readUnit = true;
 
         switch (hundreds) {
             case 1:
@@ -41,6 +42,7 @@ public class ReadNumberIntoWord {
         }
         switch (dozens) {
             case 1:
+                readUnit = false;
                 switch (unit) {
                     case 0:
                         System.out.print("ten");
@@ -99,37 +101,40 @@ public class ReadNumberIntoWord {
                 System.out.print("ninety ");
                 break;
         }
-        switch (unit) {
-            case 0:
-                System.out.print("zero");
-                break;
-            case 1:
-                System.out.print("one");
-                break;
-            case 2:
-                System.out.print("tow");
-                break;
-            case 3:
-                System.out.print("three");
-                break;
-            case 4:
-                System.out.print("four");
-                break;
-            case 5:
-                System.out.print("five");
-                break;
-            case 6:
-                System.out.print("six");
-                break;
-            case 7:
-                System.out.print("seven");
-                break;
-            case 8:
-                System.out.print("eight");
-                break;
-            case 9:
-                System.out.print("nice");
-                break;
+        if(readUnit == true){
+            switch (unit) {
+                case 0:
+                    System.out.print("zero");
+                    break;
+                case 1:
+                    System.out.print("one");
+                    break;
+                case 2:
+                    System.out.print("tow");
+                    break;
+                case 3:
+                    System.out.print("three");
+                    break;
+                case 4:
+                    System.out.print("four");
+                    break;
+                case 5:
+                    System.out.print("five");
+                    break;
+                case 6:
+                    System.out.print("six");
+                    break;
+                case 7:
+                    System.out.print("seven");
+                    break;
+                case 8:
+                    System.out.print("eight");
+                    break;
+                case 9:
+                    System.out.print("nice");
+                    break;
+            }
+
         }
 
 
