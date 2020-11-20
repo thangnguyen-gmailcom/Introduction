@@ -6,39 +6,45 @@ public class ReadNumberIntoWord {
 
         System.out.println("Enter your number : ");
         int num = scanner.nextInt();
+        if (num == 0 ) {
+            System.out.println("zero");
+            return;
+        }
         int unit = (num % 100)%10;
         int dozens = (num %100)/10;
         int hundreds = num /100;
         boolean readUnit = true;
-
         switch (hundreds) {
             case 1:
-                System.out.print("one hundred and ");
+                System.out.print("one hundred ");
                 break;
             case 2:
-                System.out.print("tow hundred and ");
+                System.out.print("tow hundred ");
                 break;
             case 3:
-                System.out.print("three hundred and ");
+                System.out.print("three hundred ");
                 break;
             case 4:
-                System.out.print("four hundred and ");
+                System.out.print("four hundred ");
                 break;
             case 5:
-                System.out.print("five hundred and ");
+                System.out.print("five hundred ");
                 break;
             case 6:
-                System.out.print("six hundred and ");
+                System.out.print("six hundred ");
                 break;
             case 7:
-                System.out.print("seven hundred and ");
+                System.out.print("seven hundred ");
                 break;
             case 8:
-                System.out.print("eight hundred and ");
+                System.out.print("eight hundred ");
                 break;
             case 9:
-                System.out.print("nine hundred and ");
+                System.out.print("nine hundred ");
                 break;
+        }
+        if (num % 100 != 0 && num >= 100) {
+            System.out.print("and ");
         }
         switch (dozens) {
             case 1:
@@ -103,14 +109,11 @@ public class ReadNumberIntoWord {
         }
         if(readUnit == true){
             switch (unit) {
-                case 0:
-                    System.out.print("zero");
-                    break;
                 case 1:
                     System.out.print("one");
                     break;
                 case 2:
-                    System.out.print("tow");
+                    System.out.print("two");
                     break;
                 case 3:
                     System.out.print("three");
@@ -131,7 +134,7 @@ public class ReadNumberIntoWord {
                     System.out.print("eight");
                     break;
                 case 9:
-                    System.out.print("nice");
+                    System.out.print("nnce");
                     break;
             }
 
