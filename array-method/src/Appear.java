@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Appear {
+
     public static void main(String[] args) {
         String s = "Babe come on" ;
         int count = 0;
@@ -11,7 +12,6 @@ public class Appear {
                 count++;
             }
         }
-
         System.out.println("So lan xuat hien cua ky tu " +
                 kytu + " trong chuoi " + s + " la " + count);
     }
